@@ -24,7 +24,10 @@ shell:
 crea_home:
 	mkdir -p datos
 
-install: crea_home build
+install: crea_home build set-perms
 
 ipython3:
 	docker-compose run --no-deps --rm -u jupyter jupyterhub ipython3
+
+set-perms:
+	${RUN} chown -R jupyter:jupyter /srv/jupyterhub
