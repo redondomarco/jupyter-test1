@@ -7,3 +7,4 @@ services:
     volumes:
       - ./datos:/srv/jupyterhub
       - ./modules:/srv/jupyterhub/modules
+      - ./notebooks:/srv/jupyterhub/notebooks
