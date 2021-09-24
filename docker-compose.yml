@@ -1,0 +1,9 @@
+version: '3'
+services:
+  jupyterhub:
+    image: jupyterhubmr:0.1
+    ports: 
+      - 8000:8000
+    volumes:
+      - $HOME_JUPYTER:/srv/jupyterhub
+      - ./modules:/srv/jupyterhub/modules

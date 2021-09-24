@@ -2,14 +2,11 @@ Fuente:
 
 https://docs.docker.com/engine/install/ubuntu/
 
-
-
-Uninstall old versions
+Desinstalar posibles versiones anteriores instaladas
 
 ```
 sudo apt-get remove docker docker-engine docker.io containerd runc
 ```
-
 
 Instalo paquetes previos necesarios:
 
@@ -38,14 +35,12 @@ echo \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
-
 Instalo paquetes
 
 ```
 sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io
-
 ```
 
 Agrego grupo y permisos para ejecutar comandos docker con mi usuario
@@ -54,9 +49,10 @@ Agrego grupo y permisos para ejecutar comandos docker con mi usuario
 sudo groupadd docker
 
 sudo service docker restart
-
 ```
 
 ```
-sudo usermod -a -G docker $TUSUARIO
+sudo usermod -a -G docker TUSUARIO
 ```
+
+Luego reiniciar
