@@ -5,5 +5,5 @@ services:
     ports: 
       - 8000:8000
     volumes:
-      - $HOME_JUPYTER:/srv/jupyterhub
+      - .datos:/srv/jupyterhub
       - ./modules:/srv/jupyterhub/modules

@@ -1,10 +1,10 @@
-include .env
+#include .env
 RUN = docker-compose run --no-deps --rm -u root jupyterhub
 
 build:
 	docker build -t jupyterhubmr:0.1 .
 
-rebuild: stop build-JRM start ipython3
+rebuild: stop build start ipython3
 
 start:
 	@docker-compose up -d
@@ -24,7 +24,7 @@ shell:
 crea_home:
 	mkdir -p datos
 
-install: crea_home start build set-perms
+install: crea_home build
 
 ipython3:
 	docker-compose run --no-deps --rm -u jupyter jupyterhub ipython3
