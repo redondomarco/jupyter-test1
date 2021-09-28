@@ -2,3 +2,9 @@ datos/
 .pythonhistory
 .env
 jupyter.code-workspace
+.ipynb_checkpoints
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
