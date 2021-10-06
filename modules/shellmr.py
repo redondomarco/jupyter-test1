@@ -14,3 +14,4 @@ from folium.plugins import HeatMap
 
 from geomr import location_rosario, projmr_to_latlon
 from pandasmr import clasifico_por_dia
+from proxymr import set_proxy

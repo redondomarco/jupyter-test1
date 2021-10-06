@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""Foobar.py: Description of what foobar does."""
+"""pandasmr.py: operatoria con pandas dataframes."""
 
 __author__ = "Marco Redondo"
 __email__ = "redondomarco@gmail.com"
@@ -22,7 +22,3 @@ def clasifico_por_dia(df):
         data.setdefault(time_index, []).append(lat_long)
     resultado = OrderedDict(sorted(data.items(), key=lambda t: t[0]))
     return resultado
-
-def test_reclamos_sua_heatmap():
-    file='./fuentes/exportacionTipo-reclamo y Fecha agosto 2021-short1.ods'
-    return reclamos_sua_heatmap(file)

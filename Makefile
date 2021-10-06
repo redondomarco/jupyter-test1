@@ -22,7 +22,7 @@ shell:
 	${RUN} /bin/bash
 
 crea_home:
-	mkdir -p datos
+	mkdir -p datos/fuentes
 
 install: crea_home build set-perms
 
