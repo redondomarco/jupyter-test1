@@ -27,7 +27,7 @@ crea_home:
 install: crea_home build set-perms
 
 ipython3:
-	docker-compose run --no-deps --rm -u jupyter jupyterhub ipython3
+	docker-compose run --no-deps --rm -u jupyter jupyterhub ipython3 -i modules/shellmr.py
 
 set-perms:
 	${RUN} chown -R jupyter:jupyter /srv/jupyterhub
